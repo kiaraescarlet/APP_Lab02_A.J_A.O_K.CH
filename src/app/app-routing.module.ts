@@ -16,6 +16,7 @@ const routes: Routes = [
     path: 'registro-de-usuario',
     loadChildren: () => import('./registro-de-usuario/registro-de-usuario.module').then( m => m.RegistroDeUsuarioPageModule)
   },
+  
 ];
 
 @NgModule({

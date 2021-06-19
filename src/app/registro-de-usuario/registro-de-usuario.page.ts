@@ -10,6 +10,7 @@ export class RegistroDeUsuarioPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
 
 }

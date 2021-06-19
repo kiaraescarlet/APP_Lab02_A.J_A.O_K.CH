@@ -1,9 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"   text="VOLVER"  mode="ios" color="success" 
+      ></ion-back-button>
+    </ion-buttons>
+
+         <ion-title>inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="/alert" >Registro de Usuario </ion-button>
+  <ion-button routerLink="/registro-de-usuario" > {{btn_Registro}} </ion-button>
 </ion-content>

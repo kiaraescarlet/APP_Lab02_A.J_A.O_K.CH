@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-
+public btn_Registro;
   constructor() { }
 
   ngOnInit() {
+    this.btn_Registro = "  REGISTRO " 
   }
 
 }
