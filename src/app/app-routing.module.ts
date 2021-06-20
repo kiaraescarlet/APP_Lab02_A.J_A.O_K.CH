@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'registro-de-usuario',
     loadChildren: () => import('./registro-de-usuario/registro-de-usuario.module').then( m => m.RegistroDeUsuarioPageModule)
   },
+  {
+    path: 'egresos-ususario',
+    loadChildren: () => import('./egresos-ususario/egresos-ususario.module').then( m => m.EgresosUsusarioPageModule)
+  },
   
 ];
 

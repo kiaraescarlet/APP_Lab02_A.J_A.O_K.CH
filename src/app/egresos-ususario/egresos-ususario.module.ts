@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InicioPageRoutingModule } from './inicio-routing.module';
+import { EgresosUsusarioPageRoutingModule } from './egresos-ususario-routing.module';
 
-import { InicioPage } from './inicio.page';
+import { EgresosUsusarioPage } from './egresos-ususario.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,10 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioPageRoutingModule,
+    EgresosUsusarioPageRoutingModule,
     ComponentsModule
- 
   ],
-  declarations: [InicioPage]
+  declarations: [EgresosUsusarioPage]
 })
-export class InicioPageModule {}
+export class EgresosUsusarioPageModule {}
