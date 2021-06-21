@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistroDeUsuarioPageModule } from './registro-de-usuario.module';
+
+import { RegistrosService} from"../servicios/registros.service";
 
 
 export class RegistroDeUsuario{
   constructor(
     public nombre,
-    public run,
+    public apellido,
+    public rut,
     public correo,
-    public clave,
+    public password,
 
   ){}
 
@@ -20,8 +24,8 @@ export class RegistroDeUsuario{
 export class RegistroDeUsuarioPage implements OnInit {
 
   registro_de_usuario;
-  constructor() { 
-    this.registro_de_usuario = new RegistroDeUsuario ( "nombre" , "run" , "correo", "clave" )
+  constructor( private registrosService:RegistrosService)  { 
+    this.registro_de_usuario = new RegistroDeUsuario ( "nombre" ,"apellido", "run" , "correo", "clave" )
 
   }
 
@@ -29,7 +33,39 @@ export class RegistroDeUsuarioPage implements OnInit {
   
   }
 datos(){
+  this.registrosService.registrarformulario(this.registro_de_usuario).subscribe(
+    (Response:any)=>{
+
+
+       if(Response.Registro){
+        alert("Los datos fueron enviador con exito");
+       
+     }  else{
+          alert("Error al enviar los datos ")
+        }
+
+    },
+    error=>{
+      alert("Error en la peticion")
+    }
+
+    
+    
+
+
+  )
+
+
+
+
+
+
+
+
 console.log("Los datos del registro son:", this.registro_de_usuario )
+
+
+
 
 }
 

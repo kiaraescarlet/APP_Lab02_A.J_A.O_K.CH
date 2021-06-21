@@ -19,9 +19,14 @@
             </ion-item>
 
             <ion-item>
+                <ion-label position="floating">Apellido</ion-label>
+            
+                <ion-input type="text" name="apellido" [(ngModel)]="registro_de_usuario.apellido"></ion-input>
+        </ion-item>
+            <ion-item>
                 <ion-label position="floating">RUN </ion-label>
             
-                <ion-input type="text" name="run" [(ngModel)]=" registro_de_usuario.run"></ion-input>
+                <ion-input type="text" name="rut" [(ngModel)]=" registro_de_usuario.rut"></ion-input>
             </ion-item>
 
             <ion-item>
@@ -33,9 +38,10 @@
             <ion-item>
                 <ion-label position="floating">Clave</ion-label>
             
-                <ion-input type="text" name="clave" [(ngModel)]=" registro_de_usuario.clave"></ion-input>
+                <ion-input type="text" name="password" [(ngModel)]=" registro_de_usuario.password"></ion-input>
             </ion-item>         
             <ion-button (click)="datos() " >REGISTRARSE</ion-button>
+            
 
         </ion-card-content>
 

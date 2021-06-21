@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'egresos-ususario',
     loadChildren: () => import('./egresos-ususario/egresos-ususario.module').then( m => m.EgresosUsusarioPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
   
 ];
 
