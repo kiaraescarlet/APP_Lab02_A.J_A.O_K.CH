@@ -7,14 +7,14 @@ import{environment} from "../../environments/environment"
 })
 export class RegistrosService {
 
-  backend = environment.backend+"/usuario/crear-usuario"; 
+  backend = environment.backend+"/usuario/obtener-usuarios"; 
 
 
 
   constructor(private http:HttpClient) { }
 
 registrarformulario(Registro_de_Usuario){
-return this.http.post('${this.backend)/usuario/crear-usuario',Registro_de_Usuario);
+return this.http.post('${this.backend)/usuario/crear-usuarios',Registro_de_Usuario);
 
 }
 

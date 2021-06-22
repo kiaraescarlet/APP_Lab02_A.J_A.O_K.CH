@@ -25,7 +25,7 @@ export class RegistroDeUsuarioPage implements OnInit {
 
   registro_de_usuario;
   constructor( private registrosService:RegistrosService)  { 
-    this.registro_de_usuario = new RegistroDeUsuario ( "nombre" ,"apellido", "run" , "correo", "clave" )
+    this.registro_de_usuario = new RegistroDeUsuario ( "nombre" ,"apellido", "rut" , "correo", "clave" )
 
   }
 
