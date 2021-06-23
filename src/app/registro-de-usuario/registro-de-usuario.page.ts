@@ -3,7 +3,6 @@ import { RegistroDeUsuarioPageModule } from "./registro-de-usuario.module";
 
 import {RegistrosService } from "../components/servicios/registros.service";
 
-
 export class RegistroDeUsuario{
   constructor(
     public nombre,
@@ -28,16 +27,13 @@ export class RegistroDeUsuarioPage implements OnInit {
     this.registro_de_usuario = new RegistroDeUsuario ( "","","","","" )
 
   }
-
   ngOnInit() {
-  
   }
 datos(){
   this.registrosService.registrarformulario(this.registro_de_usuario).subscribe(
     (Response:any)=>{
 
-
-       if(Response.Registro){
+      if(Response.Registro){
         alert("Los datos fueron enviado con exito");
        
      }  else{
@@ -49,11 +45,7 @@ datos(){
       alert("Error en la peticion")
     }
 
-    
-
-
-
-  )
+ )
 
 console.log("Los datos del registro son:", this.registro_de_usuario )
 
