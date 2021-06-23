@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroDeUsuarioPageModule } from './registro-de-usuario.module';
+import { RegistroDeUsuarioPageModule } from "./registro-de-usuario.module";
 
-import { RegistrosService} from"../servicios/registros.service";
+import {RegistrosService } from "../components/servicios/registros.service";
 
 
 export class RegistroDeUsuario{
@@ -25,7 +25,7 @@ export class RegistroDeUsuarioPage implements OnInit {
 
   registro_de_usuario;
   constructor( private registrosService:RegistrosService)  { 
-    this.registro_de_usuario = new RegistroDeUsuario ( "nombre" ,"apellido", "rut" , "correo", "clave" )
+    this.registro_de_usuario = new RegistroDeUsuario ( "","","","","" )
 
   }
 
@@ -38,7 +38,7 @@ datos(){
 
 
        if(Response.Registro){
-        alert("Los datos fueron enviador con exito");
+        alert("Los datos fueron enviado con exito");
        
      }  else{
           alert("Error al enviar los datos ")
@@ -55,16 +55,7 @@ datos(){
 
   )
 
-
-
-
-
-
-
-
 console.log("Los datos del registro son:", this.registro_de_usuario )
-
-
 
 
 }
