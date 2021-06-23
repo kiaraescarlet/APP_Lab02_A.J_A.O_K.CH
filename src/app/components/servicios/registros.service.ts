@@ -9,8 +9,7 @@ export class RegistrosService {
 
   backend = environment.backend+"/usuario/crear-usuarios"; 
 
-
-
+  backEnd = environment.backend+"/egreso/crear-egreso";
   constructor(private http:HttpClient) { }
 
 registrarformulario(registro_de_usuario){
@@ -20,7 +19,7 @@ return this.http.post("${this.backend}/usuario/crear-usuario",registro_de_usuari
 
 registarEgreso (egresos_usuario){
 
-return this.http.post('${this.backend}/egreso/crear-egreso',egresos_usuario);
+return this.http.post('${this.backEnd}/egreso/crear-egreso',egresos_usuario);
 
 
 }
