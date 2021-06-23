@@ -23,7 +23,7 @@ obtenerRegistro(registro_de_usuario){
   
   }
 
-obtenerDatos(id){
+obtenerDatos(){
   return this.http.get('${this.backend}/usuario/obtener-usuarios');
 
   
@@ -35,8 +35,8 @@ return this.http.post("$ {this.backEnd}/egreso/crear-egreso",egresos_usuario);
 }
 
 
-obtenerEgresos(id){
-  return this.http.get('${this.backend}/egreso/crear-egreso');
+obtenerEgresos(id_usuario){
+  return this.http.get('${this.backEnd}/egreso/crear-egreso',id_usuario);
 
 
 }

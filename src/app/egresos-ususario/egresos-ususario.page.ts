@@ -11,7 +11,7 @@ export class EgresosDeUsuario{
     
     public descripcion,
     public precio,
-    public id,
+    public id_usuario,
 
   ){}
 }
