@@ -5,11 +5,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-car-header>
+  <ion-card *ngFor="let dato_formulario of datos_formularios">
+    <ion-card-header>
       <ion-card-title>Lista de Usuarios</ion-card-title>
-    </ion-car-header>
+    </ion-card-header>
     <ion-card-content>
+      <ion-item>
+       Usuario: {{dato_formulario.nombre}}
+      </ion-item>
 
     </ion-card-content>
   </ion-card>

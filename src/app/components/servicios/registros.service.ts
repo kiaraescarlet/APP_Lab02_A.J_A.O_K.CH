@@ -14,8 +14,12 @@ export class RegistrosService {
   constructor(private http:HttpClient) { }  
 
 registrarformulario(datos_formulario){
-return this.http.post(`${this.backend}/crear-registro`,datos_formulario)
+return this.http.post(`${this.backend}/crear-registro`,datos_formulario);
 
+}
+
+obtenerDatosFormulario(){
+  return this.http.get(`${this.backend}/obtener-registros`)
 }
 
 registarEgreso (egresos_usuario){

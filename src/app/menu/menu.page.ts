@@ -23,10 +23,17 @@ componentes:componente [] = [
   },
   {
   
+    icono:"list-outline",
+    nombre:"Lista de Usuarios",
+    direccion :"/listadeusuarios",
+    },
+  {
+  
   icono:"wallet-outline",
   nombre:"Egresos",
   direccion :"/egresos-ususario",
   },
+  
 
 
 
