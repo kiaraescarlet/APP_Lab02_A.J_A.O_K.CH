@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core';
 import { RegistroDeUsuario } from '../../registro-de-usuario/registro-de-usuario.page';
-import{HttpClient}from "@angular/common/http"
-import{environment} from "../../../environments/environment"
+import{HttpClient}from '@angular/common/http';
+import{environment} from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrosService {
 
-  backend = environment.backend+"/usuario/crear-usuarios"; 
+  backend = environment.backend+"/registroForm"; 
 
   backEnd = environment.backend+"/egreso/crear-egreso";
-  constructor(private http:HttpClient) { }
+  
+  constructor(private http:HttpClient) { }  
 
-registrarformulario(registro_de_usuario){
-return this.http.post("${this.backend}/usuario/crear-usuario",registro_de_usuario);
+registrarformulario(datos_formulario){
+return this.http.post(`${this.backend}/crear-registro`,datos_formulario);
 
+}
+
+obtenerDatosFormulario(){
+  return this.http.get(`${this.backend}/obtener-registros`)
 }
 
 registarEgreso (egresos_usuario){

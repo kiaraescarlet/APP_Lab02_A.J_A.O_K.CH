@@ -37,7 +37,7 @@ datos(){
     (Response:any)=>{
 
 
-       if(Response.Registro){
+       if(Response.registro){
         alert("Los datos fueron enviado con exito");
        
      }  else{
